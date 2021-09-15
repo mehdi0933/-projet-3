@@ -1,0 +1,167 @@
+@import"mixins.scss";
+
+/* header */
+.image{
+    @include header;
+}
+
+.titre-2{
+    @include titre2;
+    }
+
+.lacarte{
+    p{
+        @include cookie;
+        font-size: 20px;
+    }
+    h2{
+        @include cookie;
+        font-size: 30px; 
+    }
+        @include carte;
+    background-color:rgba(219, 155, 155, 0.555);
+    .fa-music{
+        @include musique;
+      }
+           
+      
+      h3{
+       @include ligne  ;
+       @include cookie;
+       font-size: 25px;
+       
+    }
+     &--surpasse{
+        background: linear-gradient( to top, rgb(0,0,0) 0%,  rgb(0,0,0) 4px, transparent 5px)no-repeat ;
+        @include ligne2;
+       
+       
+     }
+      &--surpasse:hover{
+    @include ligne3;
+
+     }
+    
+      &--grand{
+          @include flex;
+      }
+      &--ajuste{
+          padding-left: 8px;
+      }
+     
+      
+      &--fin{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    //prix en gras
+    &--test_1{
+        @include gras;
+    }
+   &--note{
+       font-size:20px;
+       color: black;
+       justify-content: space-between;
+   } 
+   &--finial{
+       @include marche;
+   }
+   &--ajustee{
+       margin-left: 5px;
+   }
+
+}
+
+
+/* footer */
+.footer{
+    @include footer;
+   
+  }
+
+/* animation wiggle */
+
+
+// reponsive
+@media screen and  (min-width: 1010px){
+    
+    .lacarte--voiture:before{
+       content:url("img/menu-1gauche.png");
+   
+ }
+   
+.lacarte--voiture:after{
+       content:url("img/menu-1droit.png");
+  }
+ }
+
+@media screen and (max-width: 1030px)and(min-width:1010px){
+    .lacarte--voiture:before{
+        content:url("img/menu-1gauche.png");
+    
+  }
+    
+ .lacarte--voiture:after{
+        content:url("img/menu-1droit.png");
+   }
+   
+    .lacarte{
+    @include ipadpro1;
+
+    }
+    .finial{
+        @include ipadpro2;
+    }
+   
+        .image{
+            @include ipadpro3;
+        }
+}
+@media screen and (max-width: 1010px) and(min-width:720px) {
+    .lacarte--voiture:before{
+        content:url("img/menu_ipad.png");
+    
+  }
+    
+ .lacarte--voiture:after{
+        content:url("img/menu-1droit.png");
+   }
+   
+    .lacarte{
+        @include ipad1;
+    }
+    .finial{
+        @include ipad2;
+    }
+  
+}
+
+@media screen and (max-width: 720px){
+    .imag{
+      @include  phone1;
+    }
+    .lacarte{
+        @include  phone2;
+        
+
+    }
+    .lacarte--finial{
+       @include phone3;
+    }
+    .lacarte--voiture::before{
+        content:url("img/menu-1gauchephone.png");
+    
+  }
+
+    
+.lacarte--voiture:after{
+    content:url("img/menu-1droitphone.png");
+}
+.footer{
+    @include phone4;  
+   
+  }       
+
+}
+    
+        
