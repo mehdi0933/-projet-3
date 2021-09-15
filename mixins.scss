@@ -1,0 +1,278 @@
+//page style.css => index.html
+// ombre les boites
+@mixin box {box-shadow :0px 0px 9px 0px;
+    transform:translateX(-50%, -50%);
+    padding-top: 35%;
+    left: 50%;
+    font-family: 'Alex Brush', cursive;
+    
+}
+
+//header
+@mixin header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: rgb(82, 136, 131);
+    .taille{
+        width: 50%;
+    }
+}
+// footer
+@mixin footer {  display: flex;
+    justify-content:space-between; 
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    background-color:rgb(82, 136, 131);
+    height: 50px;
+    /* animation footer */
+.button:hover {
+    text-decoration: none;
+    font-weight: bold;
+    animation:shake .01s ease-in-out 
+    .01s infinite alternate;
+    
+}
+/* animation wiggle */
+
+@keyframes shake {
+ 
+        from {
+            transform: rotate(15deg);
+        }
+        to{
+            transform: rotate(-15deg);
+            transform-origin: center center;
+        }
+    
+} 
+} 
+    
+    .button{
+     margin-top: 15px;
+     margin-left: 35px;
+     margin-right: 35px;
+     color: rgba(186, 189, 30, 0.993);
+     font-weight: bold; 
+     text-decoration: none;
+    
+}
+//... animation dans la div blocks
+@mixin animation ($delay1:0.0s , $delay2:0.0s) {
+    animation: dot 1.3s infinite;
+    // animation: dot 1.3s infinite;
+    opacity: 0;
+    animation-delay: $delay1;
+    animation-delay: $delay2;
+}
+
+//h3 hover after animation ligne page=>menu 
+@mixin ligne {
+   
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    
+}
+
+@mixin ligne2 {
+    background-size: 0 100%;
+    transition:background-size .3s ;
+    // transition: 5s;
+    margin-left: 35px;
+    margin-right: 35px;
+    
+}
+
+@mixin ligne3 {
+    background-size: 100% 100% ;
+
+}
+@mixin musique {
+    font-size: 2em;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff4f30+0,ff2100+0,ef7f39+100 */
+background: #ff4f30; /* Old browsers */
+background: -moz-linear-gradient(left, #ff4f30 0%, #fa6756 0%, #FFA07A 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #ff4f30 0%,#fa6756 0%,#FFA07A 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #ff4f30 0%,#fa6756 0%,#FFA07A 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4f30', endColorstr='#FFA07A',GradientType=1 ); /* IE6-9 */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text ;
+    margin-bottom: 30px;
+}
+// page menu div carte
+@mixin carte {
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 0px ;
+   margin-left: 150px;
+   margin-right: 150px;
+   margin-bottom: 100px;
+   font-family: 'Alex Brush', cursive;
+}
+
+//page menu
+@mixin titre2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+@mixin degrade {
+    
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d7fc32+0,ffffff+100 */
+    background: #d7fc32; /* Old browsers */
+    background: -moz-linear-gradient(left, #95b408 0%,#acf7a8e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #95b408 0%,#acf7a8e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #95b408 0%,#acf7a8e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7fc32', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+ }
+@mixin degrad {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FA8072+18,ff4f30+34,293ad8+34,293ad8+85 */
+            background: #FA8072; /* Old browsers */
+            background: -moz-linear-gradient(left, #FA8072 18%, #ff4f30 34%, #293ad8 34%, #293ad8 85%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #FA8072 18%,#ff4f30 34%,#293ad8 34%,#293ad8 85%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #FA8072 18%,#ff4f30 34%,#293ad8 34%,#293ad8 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FA8072', endColorstr='#293ad8',GradientType=1 ); /* IE6-9 */
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+}
+//page menu mettre paragraphe div test
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+// page menu dernier paragraphe div final
+@mixin marche {
+    padding-left: 160px;
+}
+// police
+@mixin cookie {
+    font-family: 'Cookie', cursive;
+}
+@mixin inika {
+    font-family: 'Inika', serif;
+}
+@mixin caveat {
+    font-family: 'Caveat Brush', cursive;
+}
+//prix en gras
+@mixin gras {
+    font-weight :bold;
+}
+
+// page menu responsive  1010PX
+@mixin responsive1010 {
+    
+        .image{
+            width: auto;
+        }
+        .carte{
+            /* width:100% ; */
+            margin-left: 150px;
+    
+        }
+        .finial{
+            margin-left: -120px;
+        }
+}
+// page menu responsive  720PX
+
+@mixin responsive2{
+   
+        .imag{
+            width: 100%;
+            height: 100%;
+        }
+        .carte{
+            width:100%;
+            margin-left:auto;
+            font-size: 80%;
+    
+        }
+        .finial{
+            margin-left: -145px;
+        }
+    }
+//responsive 1030px
+@mixin ipadpro1 {
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    margin-left: auto;
+    font-family: 'Alex Brush', cursive;
+}
+@mixin ipadpro2 {
+    margin-left: -120px;
+}
+
+@mixin ipadpro3{
+           width: 100%;
+            height: 100%;
+
+}
+//responsive 1010px
+@mixin ipad1{
+    width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 0;
+        font-size: 25PX;
+
+}
+@mixin ipad2{
+    margin-left: -120px;
+
+}
+
+//responsive 720px
+@mixin phone1 {
+    width: 100%;
+        height: 100%;
+}
+@mixin phone2 {
+    width:100%;
+        
+    font-size: 15px;
+margin-left: 0;
+padding-right: 0;
+}
+@mixin phone3 {
+    margin-left: -145px;
+}
+@mixin phone4 {
+    display: flex;
+    justify-content:space-between; 
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    background-color:rgb(82, 136, 131);
+    height: 50px;
+    /* animation footer */
+.button:hover {
+    text-decoration: none;
+    font-weight: bold;
+    animation:shake .01s ease-in-out 
+    .01s infinite alternate;
+    
+}
+/* animation wiggle */
+
+@keyframes shake {
+ 
+        from {
+            transform: rotate(15deg);
+        }
+        to{
+            transform: rotate(-15deg);
+            transform-origin: center center;
+        }
+    
+} 
+width: 70%;
+}

@@ -1,0 +1,253 @@
+@import"mixins.scss";
+
+/* header */
+
+.image{
+    @include header;
+}
+
+h2{
+    @include titre2;
+     font-size: 35px;
+     
+    }
+
+.cart{
+    @include carte;
+    background-color: #e0d5eb;
+//h3 animation ligne 
+h2{
+  font-size: 35px;
+  color: blue;
+}
+h3{
+  font-size: 30px;
+    @include ligne;
+}
+p{font-size: 25px;}
+  //prix en gras
+  &--test_1{
+    @include gras;
+}
+&--ligner{
+    background: linear-gradient( to top, rgb(84, 53, 219) 0%,  rgb(84, 53, 219) 4px, transparent 5px)no-repeat ;
+    @include ligne2;
+   
+ }
+ &--ligner:hover{
+    @include ligne3;
+      }
+  
+
+&--test_4{     
+  padding-left: 160px;
+  @include gras;
+}
+      &--test_3{
+        padding-left: 80px;
+        @include gras;
+    }
+&--ajustee{
+  padding-left:10px;
+}
+&--test{
+    @include flex;
+}
+&--ajuste{
+    padding-left: 8px;
+}
+
+
+}
+
+
+   /* footer */
+.footer{
+  @include footer;
+ 
+}
+
+@media screen and (min-width: 1030px){
+  .cart--lignerhaut:before{
+    content:url("img/menu-3hautgauche.png");
+  
+  }
+  .cart--lignerhaut:after{
+    content:url("img/menu-3hautdroite.png");
+  
+  }
+  .cart--lignercentre:before{
+    content:url("img/menu-3centregauche.png");
+  
+  }
+  .cart--lignercentre:after{
+    content:url("img/menu-3centredroie.png");
+  
+  }
+  .cart--lignerbas:before{
+    content:url("img/menu-3basgauche.png");
+  
+  }
+  .cart--lignerbas:after{
+    content:url("img/menu-3basdroite.png");
+  
+  }
+  }
+  
+  @media screen and (max-width: 1030px)and (min-width: 1010px){
+    .cart--lignerhaut:before{
+      content:url("img/menu-3hautgaucheipadprod.png");
+    
+    }
+    .cart--lignerhaut:after{
+      content:url("img/menu-3hautdroite.png");
+    
+    }
+    .cart--lignercentre:before{
+      content:url("img/menu-3centregauche.png");
+    
+    }
+    .cart--lignercentre:after{
+      content:url("img/menu-3centredroieipadpro.png");
+    
+    }
+    .cart--lignerbas:before{
+      content:url("img/menu-3basgauche.png");
+    
+    }
+    .cart--lignerbas:after{
+      content:url("img/menu-3basdroiteipadpro.png");
+    
+    }
+     
+    .cart{
+      .cart--lignerhaut:before{
+        content:url("img/menu-3hautgaucheipadprod.png");
+      
+      }
+      .cart--lignerhaut:after{
+        content:url("img/menu-3hautdroite.png");
+      
+      }
+      .cart--lignercentre:before{
+        content:url("img/menu-3centregauche.png");
+      
+      }
+      .cart--lignercentre:after{
+        content:url("img/menu-3centredroieipadpro.png");
+      
+      }
+      .cart--lignerbas:before{
+        content:url("img/menu-3basgauche.png");
+      
+      }
+      .cart--lignerbas:after{
+        content:url("img/menu-3basdroiteipadpro.png");
+      
+      }
+      @include ipadpro1;
+  
+    }
+    .finial{
+      @include ipadpro2;
+    } 
+   
+  
+    
+        .image{
+          @include ipadpro3;
+        }
+  }
+@media screen and (max-width: 1010px)and (min-width: 730px){
+  .cart--lignerhaut:before{
+    content:url("img/menu-3hautgaucheipad.png");
+
+  }
+  .cart--lignerhaut:after{
+    content:url("img/menu-3hautdroiteipad.png");
+  
+  }
+  
+  .cart--lignercentre:before{
+    content:url("img/menu-3centregaucheipad.png");
+  
+  }
+  .cart--lignercentre:after{
+    content:url("img/menu-3centredroieipad.png");
+  
+  }
+  .cart--lignerbas:before{
+    content:url("img/menu-3basgaucheipad.png");
+  
+  }
+  .cart--lignerbas:after{
+    content:url("img/menu-3basdroiteipad.png");
+  
+  }
+  .cart{
+    @include ipad1;
+    h3{
+      font-size: 21px;
+  }
+  p{
+      font-size: 20px;
+  }
+
+  }
+  .finial{
+    @include ipad2;
+  }
+
+
+}
+
+@media screen and (max-width: 730px){
+
+  .cart--lignerhaut:before{
+    content:url("img/menu-3hautgauchephone.png");
+
+  }
+  .cart--lignerhaut:after{
+    content:url("img/menu-3hautdroitephone.png");
+  
+  }
+  
+  .cart--lignercentre:before{
+    content:url("img/menu-3centregauchephone.png");
+  
+  }
+  .cart--lignercentre:after{
+    content:url("img/menu-3centredroiephone.png");
+  
+  }
+  .cart--lignerbas:before{
+    content:url("img/menu-3basgauchephone.png");
+  
+  }
+  .cart--lignerbas:after{
+    content:url("img/menu-3basdroitephone.png");
+  
+  }
+  .image{
+    @include  phone1;
+  }
+  .cart{
+    @include  phone2;
+    h3{
+      font-size: 15px;
+  }
+  p{
+      font-size: 15px;
+  }
+  }
+  .cart--finial{
+    @include  phone3;
+  }
+
+      .footer{
+        @include  phone4;
+        
+         
+        }
+      
+}

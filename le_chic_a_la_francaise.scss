@@ -1,0 +1,199 @@
+@import "mixins.scss";
+/* header */
+.image{
+    @include header;
+}
+/* footer */
+.footer{
+    @include footer;
+   
+  }
+.thecarte{
+    @include carte;
+    @include inika;
+    background-color: #e0d5eb;
+    &--rouge{
+        color: red;
+    }
+    &--bleu{
+        color:blue;
+    }
+   
+&--degrad{
+    @include titre2;
+    @include degrad; 
+   
+    }
+
+
+&--para{
+    @include flex;
+    color: red;
+
+}
+&--parablue{
+    @include flex;
+    color:blue;
+}
+h3{
+    @include ligne;
+}
+
+&--lignéee{
+    background: linear-gradient( to top, rgb(255,0,0) 0%,  rgb(255,0,0) 4px, transparent 5px)no-repeat ;
+    @include ligne2;
+   
+ }
+  &--lignéee:hover{
+@include ligne3;
+  }
+  &--ligné{
+    background: linear-gradient( to top, rgb(84, 53, 219) 0%,  rgb(84, 53, 219) 4px, transparent 5px)no-repeat ;
+    @include ligne2;
+   
+ }
+   //prix en gras
+   &--test_1{
+    @include gras;
+}
+ &--ligné:hover{
+    @include ligne3;
+      }
+
+&--finial{
+    @include marche;
+    color: blue;
+}
+
+}
+
+
+ @media screen and (min-width: 1030px){
+
+    .thecarte--rouge:before{
+    content:url("img/menu-2gaucherouge.png");
+
+}
+.thecarte--rouge:after{
+    content:url("img/menu-2droiterouge.png");
+
+}
+.thecarte--bleu:before{ 
+    content:url("img/menu-2gauchebleu.png");
+
+}
+.thecarte--bleu:after{ 
+     content:url("img/menu-2droitebleu.png");
+
+ }}
+
+
+
+@media screen and (max-width: 1030px) and  (min-width: 1010px){
+    .thecarte--rouge:before{
+        content:url("img/menu-2ipadpro.png");
+    
+    }
+   .thecarte--rouge:after{
+        content:url("img/menu-2droiterouge.png");
+    
+    }
+    .thecarte--bleu:before{ 
+        content:url("img/menu-2gauchebleu.png");
+    
+    }
+    .thecarte--bleu:after{ 
+         content:url("img/menu-2droitebleu.png");
+    
+     }
+   
+   
+    .thecarte{
+    
+        @include ipadpro1;
+
+    }
+    .finial{
+        @include ipadpro2;
+    }
+    
+        .image{
+            @include ipadpro3;
+        }
+    }
+
+@media screen and (max-width: 1010px) and (min-width: 720px){
+    h3{
+        font-size: 15px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .thecarte--rouge:before{
+        content:url("img/menu-2gaucherougeipad.png");
+    
+    }
+    .thecarte--rouge:after{
+        content:url("img/menu-2droiterougeipad.png");
+    
+    }
+    .thecarte--bleu:before{ 
+        content:url("img/menu-2gauchebleuipad.png");
+    
+    }
+    .thecarte--bleu:after{ 
+         content:url("img/menu-2droitebleuipad.png");
+    
+     }
+   
+    .thecarte{
+        @include ipad1;
+    }
+    .finial{
+        @include ipad2;
+    }
+    
+   
+}
+
+
+@media screen and (max-width: 720px){
+    .imag{
+        @include  phone1;
+    }
+    .thecarte{
+        @include  phone2;
+        .thecarte--finial{
+            @include  phone3;
+        }
+    }
+    
+   
+        .footer{
+            @include  phone4;
+           
+          }
+          .thecarte--rouge:before{
+            content:url("img/menu-2gaucherougephone.png");
+        
+        }
+        .thecarte--rouge:after{
+            content:url("img/menu-2droiterougephone.png");
+        
+        }
+        .thecarte--bleu:before{ 
+            content:url("img/menu-2gauchebleuphone.png");
+        
+        }
+        .thecarte--bleu:after{ 
+             content:url("img/menu-2droitebleuphon.png");
+        
+         }
+         h3{
+            font-size: 9px;
+        }
+        p{
+            font-size: 9px;
+        }
+        }
+        

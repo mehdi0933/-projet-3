@@ -1,0 +1,143 @@
+@import"mixins.scss";
+
+/* header */
+.image{
+    @include header;
+}
+
+
+
+.carte{
+    
+    @include carte;
+// police 
+@include caveat;
+//prix en gras
+&--test_1{
+    @include gras;
+} 
+
+  
+&--titi2{
+    @include degrade;
+    }
+h3{
+    @include ligne  ;
+ }
+  &--cote{
+     background: linear-gradient( to top, rgb(154, 235, 168) 0%,  rgb(154, 235, 168) 4px, transparent 5px)no-repeat ;
+     @include ligne2;
+    
+  }
+  
+
+        
+   &--cote:hover{
+ @include ligne3;
+
+  }
+&--test{
+     @include flex;
+}
+&--ajuste{
+    padding-left: 8px;
+}
+&--test_3{
+    margin-left: 90px;
+    @include gras
+}
+}
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    @include footer;
+   
+  }
+
+/* animation wiggle */
+
+
+// reponsive
+@media screen and (min-width: 1030px){
+    .carte--vert::before{
+        content:url("img/titre2.png");
+    }
+    .carte--vert:after{
+        content:url("img/titre.2.png");
+    }
+}
+
+@media screen and (max-width: 1030px)and(min-width:1010px){
+    
+    .carte--vert::before{
+        content:url("img/titre2pad.png");
+    }
+    .carte--vert:after{
+        content:url("img/titre.2pad.png");
+    }
+    .carte{
+
+        @include ipadpro1;
+
+    }
+    .finial{
+        @include ipadpro2;
+       
+    }
+
+     
+     
+        .image{
+            @include ipadpro3;
+            
+        }
+    }
+@media screen and (max-width: 1010px)and(min-width:720px){
+    
+    
+    .carte--vert::before{
+        content:url("img/titre2pad.png");
+    }
+    .carte--vert:after{
+        content:url("img/titre.2pad.png");
+    }
+   
+    .carte{
+        @include ipad1;
+       
+    }
+    .finial{
+        @include ipad2;
+    }
+}
+
+@media screen and (max-width: 720px){
+    
+    .carte--vert::before{
+        content:url("img/titre2phone.png");
+    }
+    .carte--vert:after{
+        content:url("img/titre.2phone.png");
+    }
+    .imag{
+        @include  phone1;
+    }
+    .carte{
+        @include  phone2;
+        
+    }
+    .carte--finial{
+        @include phone3;
+
+    }
+     
+        .footer{
+            @include phone4;
+           
+          }}
